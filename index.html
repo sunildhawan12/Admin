@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="admin-box">
+    <h2 class="admin-header">🛠 Admin Panel</h2>
+
+    <!-- 🔐 Password Field -->
+    <input type="password" id="adminPassInput" placeholder="Enter Admin Password" />
+    <button onclick="verifyAdmin()" style="background-color: #6c5ce7; color: white;">🔓 Login</button>
+
+    <!-- ℹ️ Message Display -->
+    <p id="adminMsg"></p>
+
+    <!-- 📊 Table Section -->
+    <div class="table-responsive" id="scrollWrapper">
+      <table id="historyTable" style="display: none;">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name / Phone</th>
+            <th>Date / Time</th>
+            <th>Location</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <!-- 📦 Buttons -->
+    <div class="admin-buttons">
+      <button class="add-student-btn">➕ Add Student</button>
+      <button class="feedback-btn">💬 Feedback</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
